@@ -1,0 +1,94 @@
+.heal-shop-popover-background-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 10;
+}
+.heal-shop-popover {
+    position: absolute;
+    width: min(80vh, 80vw);
+    left: calc(50vw - min(40vh, 40vw) - min(0.5vh, 0.5vw));
+    height: min(60vw, 60vh);
+    top: calc(min(10vw, 10vh) - min(0.5vh, 0.5vw));
+    border: solid min(0.5vh, 0.5vw) black;
+    background: #ffdbad;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-image: url("../images/textures/texture-2.jpg");
+
+    color: white;
+    text-shadow: min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;
+}
+.heal-shop-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.heal-shop-title-image {
+    width: min(8vh, 8vw);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/heart.png");
+}
+.heal-shop-title {
+    text-align: center;
+    font-size: min(6vh, 6vw);
+    font-family: Chalkboard, serif;
+}
+.heal-shop-close-button {
+    height: min(8vh, 8vw);
+    margin-left: min(3vh, 3vw);
+    padding-left: min(3vh, 3vw);
+    padding-right: min(3vh, 3vw);
+    margin-bottom: min(3vh, 3vw);
+}
+.heal-shop-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: min(1vh, 1vw);
+}
+.heal-shop-main-section {
+    flex: 1;
+    display: flex;
+}
+.heal-shop-sub-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.heal-shop-cost {
+    text-align: center;
+    font-size: min(3vh, 3vw);
+    margin-top: min(0.25vh, 0.25vw);
+}
+.heal-shop-health {
+    text-align: center;
+    font-size: min(4vh, 4vw);
+    margin-top: min(1vh, 1vw);
+    margin-bottom: min(1vh, 1vw);
+}
+.heal-shop-3-7-button, .heal-shop-30-70-button, .heal-shop-15-25-percent-button, .heal-shop-full-heal-button {
+    font-size: min(4vh, 4vw);
+    margin: 0;
+    width: min(35vh, 35vw);
+    align-self: center;
+}
+.heal-shop-gold {
+    text-align: center;
+    font-size: min(4vh, 4vw);
+    margin-bottom: min(1vh, 1vw);
+    margin-top: min(1vh, 1vw);
+}

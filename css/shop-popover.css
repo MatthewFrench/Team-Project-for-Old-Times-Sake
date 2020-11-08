@@ -1,0 +1,181 @@
+.shop-popover-background-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 10;
+}
+.shop-popover {
+    position: absolute;
+    width: min(80vh, 80vw);
+    left: calc(50vw - min(40vh, 40vw) - min(0.5vh, 0.5vw));
+    height: min(65vw, 65vh);
+    top: calc(min(10vw, 10vh) - min(0.5vh, 0.5vw));
+    border: solid min(0.5vh, 0.5vw) black;
+    background: #ffdbad;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.shop-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.shop-title-image {
+    width: min(8vh, 8vw);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.shop-title {
+    text-align: center;
+    font-size: min(6vh, 6vw);
+    font-family: Chalkboard, serif;
+
+    color: white;
+    text-shadow:
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;
+}
+.shop-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.shop-left-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.shop-left-top-pane {
+    flex: 1;
+    border: solid min(0.25vh, 0.25vw) black;
+    background-color: white;
+    margin: min(1vh, 1vw);
+    max-height: min(30vh, 30vw);
+    display: flex;
+    flex-direction: column;
+    font-size: min(3vh, 3vw);
+}
+.shop-left-bottom-pane {
+    margin-left: min(2vh, 2vw);
+    margin-right: min(2vh, 2vw);
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    text-shadow:
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;
+}
+.shop-current-armor-title {
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+    font-size: min(3vh, 3vw);
+}
+.shop-current-armor {
+    flex: 1;
+    margin-bottom: min(0.25vh, 0.25vw);
+    font-size: min(3vh, 3vw);
+}
+.shop-current-armor-count {
+    flex: 1;
+    margin-bottom: min(0.25vh, 0.25vw);
+    font-size: min(3vh, 3vw);
+}
+.shop-current-armor-value {
+    flex: 1;
+    margin-bottom: min(0.25vh, 0.25vw);
+    font-size: min(3vh, 3vw);
+}
+.shop-right-pane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: min(1.5vh, 1.5vw);
+}
+.shop-buy-button {
+    height: min(8vh, 8vw);
+    margin-left: 0;
+    margin-right: min(3vh, 3vw);
+    padding-left: min(3vh, 3vw);
+    padding-right: min(3vh, 3vw);
+}
+.shop-sell-button {
+    height: min(8vh, 8vw);
+    margin-left: min(3vh, 3vw);
+    margin-right: min(3vh, 3vw);
+    padding-left: min(3vh, 3vw);
+    padding-right: min(3vh, 3vw);
+}
+.shop-gold {
+    flex: 1;
+    text-align: center;
+    font-size: min(4vh, 4vw);
+
+    color: white;
+    text-shadow:
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black,
+            max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black,
+            min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;
+}
+.shop-close-button {
+    height: min(8vh, 8vw);
+    margin-left: min(3vh, 3vw);
+    padding-left: min(3vh, 3vw);
+    padding-right: min(3vh, 3vw);
+}
+.shop-table-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
+.shop-table-rating-column {
+    flex: 1;
+    text-align: center;
+    max-width: min(15vh, 15vw);
+}
+.shop-table-item-column {
+    flex: 1;
+    text-align: left;
+}
+.shop-table-cost-column {
+    flex: 1;
+    text-align: center;
+    max-width: min(15vh, 15vw);
+}
+.shop-table-row-container {
+    overflow-y: auto;
+    flex: 1;
+}
+.shop-table-row {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+}
+.shop-table-row-buyable.selected {
+    background-color: #5ca7d9;
+}.shop-table-row-not-buyable.selected {
+     background-color: #d95c5c;
+ }
+.shop-table-empty {
+    width: 100%;
+    text-align: center;
+}

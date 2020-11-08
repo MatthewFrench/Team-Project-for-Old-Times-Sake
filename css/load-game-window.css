@@ -1,0 +1,44 @@
+.load-game-window {
+    background: #ffcd85;
+    display: flex;
+}
+.load-game-title {
+    color: white;
+    font-family: Chalkboard, serif;
+    width: 100%;
+    text-align: center;
+    font-size: min(8vh, 8vw);
+    margin-top: min(3vh, 3vw);
+}
+.load-game-container {
+    flex: 1;
+    margin: min(2vh, 2vw) min(5vh, 5vw);
+    font-size: min(6vh, 5vw);
+    border-bottom: solid min(0.75vh, 0.75vw) black;
+    border-top: solid min(0.75vh, 0.75vw) black;
+    overflow: auto;
+}
+.load-game-back-button {
+    margin-bottom: min(5vh, 5vw);
+    font-size: min(7vh, 7vw);
+}
+.load-game-import-button {
+    margin-bottom: min(1vh, 1vw)
+}
+.load-game-item {
+    border: solid min(0.25vh, 0.25vw) black;
+    width: 100%;
+    margin: min(0.5vh, 0.5vw) 0;
+    background-color: #828282;
+    box-sizing: border-box;
+}
+.load-game-item:active {
+    border: solid min(0.75vh, 0.75vw) white;
+    margin: 0;
+}
+.load-game-item-name {
+
+}
+.load-game-item-level {
+
+}

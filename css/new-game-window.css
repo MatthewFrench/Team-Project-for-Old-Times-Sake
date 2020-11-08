@@ -1,0 +1,20 @@
+.new-game-window {
+    background: #ffcd85;
+    justify-content: space-evenly;
+}
+.new-game-title {
+    color: white;
+    font-family: Chalkboard, serif;
+    width: 100%;
+    text-align: center;
+    font-size: min(10vh, 10vw);
+    margin-top: min(3vh, 3vw);
+    margin-bottom: min(2vh, 2vw);
+}
+
+.new-game-new-button,
+.new-game-load-button,
+.new-game-about-button {
+    font-size: min(7vh, 7vw);
+    height: min(20vh, 20vw);
+}

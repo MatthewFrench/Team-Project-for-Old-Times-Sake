@@ -1,0 +1,121 @@
+.attack-popover-background-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 10;
+}
+.attack-popover {
+    position: absolute;
+    width: min(80vh, 80vw);
+    left: calc(50vw - min(40vh, 40vw) - min(0.5vh, 0.5vw));
+    height: min(40vw, 40vh);
+    top: calc(min(15vw, 15vh) - min(0.5vh, 0.5vw));
+    border: solid min(0.5vh, 0.5vw) black;
+    background: #ffdbad;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-image: url("../images/textures/texture-15.jpg");
+}
+.attack-enemy-information-container {
+    flex: 1;
+    display: flex;
+}
+.attack-enemy-image {
+    width: min(16vh, 16vw);
+    height: min(16vh, 16vw);
+    margin-left: min(0.5vh, 0.5vw);
+    margin-right: min(0.5vh, 0.5vw);
+    margin-top: min(0.5vh, 0.5vw);
+    background-size: contain;
+}
+.attack-enemy-text-information {
+    flex: 1;
+    padding-left: min(0.5vh, 0.5vw);
+    padding-top: min(0.5vh, 0.5vw);
+    display: flex;
+    flex-direction: column;
+    white-space: pre;
+}
+.attack-enemy-name {
+    font-size: min(6vh, 6vw);
+    flex: 1;
+}
+.attack-enemy-health {
+    flex: 1;
+    font-size: min(5vh, 5vw);
+    padding-top: min(1.5vh, 1.5vw);
+}
+.attack-self-information-container {
+    margin: min(2vh, 2vw);
+    font-size: min(6vh, 6vw);
+    padding-top: min(1vh, 1vw);
+    white-space: pre;
+}
+.attack-controls-container {
+    flex: 1;
+}
+.attack-attack-button {
+    font-size: min(6vh, 6vw);
+    margin: 0 0 0 min(2vh, 2vw);
+    width: min(25vw, 25vh);
+}
+.attack-run-button {
+    font-size: min(6vh, 6vw);
+    margin: 0 0 0 min(2vh, 2vw);
+    width: min(25vw, 25vh);
+}
+.attack-items-button {
+    padding-left: min(2vh, 2vw);
+    padding-right: min(2vh, 2vw);
+    font-size: min(6vh, 6vw);
+    margin: 0 0 0 min(2vh, 2vw);
+}
+
+
+.attack-victory-container {
+    display: flex;
+    flex: 1;
+    margin-bottom: min(2vh, 2vw);
+}
+.attack-rewards-title {
+    font-size: min(3vh, 3vw);
+    font-weight: bold;
+}
+.attack-rewards-gold {
+    font-size: min(2.5vh, 2.5vw);
+}
+.attack-rewards-experience {
+    font-size: min(2.5vh, 2.5vw);
+}
+.attack-victory-close-button {
+    width: min(20vh, 20vw);
+}
+
+
+.attack-death-container {
+    display: flex;
+    flex: 1;
+    margin-bottom: min(2vh, 2vw);
+}
+.attack-death-text-container {
+    margin-left: min(3vh, 3vw);
+    flex: 1;
+}
+.attack-death-title {
+    font-size: min(3vh, 3vw);
+    font-weight: bold;
+}
+.attack-death-gold {
+    font-size: min(2.5vh, 2.5vw);
+}
+.attack-death-text {
+    font-size: min(2.5vh, 2.5vw);
+}

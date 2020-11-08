@@ -1,0 +1,63 @@
+.items-popover-background-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 11;
+}
+.items-popover {
+    position: absolute;
+    width: min(70vh, 70vw);
+    left: calc(50vw - min(35vh, 35vw) - min(0.5vh, 0.5vw));
+    height: min(30vw, 30vh);
+    top: calc(min(25vw, 25vh) - min(0.5vh, 0.5vw));
+    border: solid min(0.5vh, 0.5vw) black;
+    background: #ffdbad;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/textures/texture-14.jpg");
+}
+.items-title {
+    width: 100%;
+    text-align: center;
+    font-size: min(6vh, 6vw);
+    font-family: Chalkboard, serif;
+}
+.items-container {
+    flex: 1;
+    display: flex;
+    padding-right: min(1vh, 1vw);
+    justify-content: space-evenly;
+}
+.items-close-button {
+    margin-bottom: min(1vh, 1vw);
+    font-size: min(4.5vh, 4.5vw);
+    margin-left: min(5vh, 5vw);
+    margin-right: min(5vh, 5vw);
+    border-radius: min(1vh, 1vw);
+}
+.item-box {
+    flex: 1;
+    border: solid min(0.4vh, 0.4vw) black;
+    margin-top: min(1vh, 1vw);
+    margin-left: min(1vh, 1vw);
+    max-width: min(11vw, 11vh);
+    max-height: min(11vw, 11vh);
+    background-size: contain;
+    position: relative;
+}
+.item-box-name {
+    width: min(16vh, 16vw);
+    text-align: center;
+    font-size: min(1.75vh, 1.75vw);
+    position: absolute;
+    top: max(-2.5vh, -2.5vw);
+    left: calc(max(-8vh, -8vw) + min(5.5vw, 5.5vh));
+}

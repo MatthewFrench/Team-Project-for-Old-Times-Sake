@@ -1,0 +1,50 @@
+html {
+  touch-action: manipulation;
+}
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-image: url("../images/textures/texture-11.jpg");
+}
+.button {
+    color: white;
+    border: solid min(1vh, 1vw) black;
+    background-color: black;
+    font-size: min(4.5vh, 4.5vw);
+    margin-left: min(5vh, 5vw);
+    margin-right: min(5vh, 5vw);
+    border-radius: min(1vh, 1vw);
+    outline: white;
+    white-space: nowrap;
+    user-select: none;
+}
+.button:active {
+    background-color: #3e3131;
+    border-color: white;
+}
+.fullWindow {
+    margin: min(3vh, 3vw);
+    width: calc(100% - min(3vh, 3vw)*2);
+    border: solid min(0.25vh, 0.25vw) black;
+    height: calc(100% - min(3vh, 3vw)*2 - min(0.25vh, 0.25vw)*2);
+    display: flex;
+    flex-direction: column;
+}
+.textStroke {
+    /*
+    -webkit-text-stroke: 1px black;
+     */
+    text-shadow:
+            min(0.75vh, 0.75vw) min(0.75vh, 0.75vw) 0 #000,
+            max(-0.25vh, -0.25vw) max(-0.25vh, -0.25vw) 0 #000,
+            min(0.25vh, 0.25vw) max(-0.25vh, -0.25vw) 0 #000,
+            max(-0.25vh, -0.25vw) min(0.25vh, 0.25vw) 0 #000,
+            min(0.25vh, 0.25vw) min(0.25vh, 0.25vw) 0 #000;
+}

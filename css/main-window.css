@@ -1,0 +1,58 @@
+.main-window {
+
+}
+.main-window-top {
+    display: flex;
+    flex: 3;
+}
+.main-window-gameview {
+    flex: 2;
+    border: solid min(0.25vh, 0.25vw) black;
+    padding: min(1vh, 1vw);
+}
+.main-window-statview {
+    flex: 1;
+    border: solid min(0.25vh, 0.25vw) black;
+    background-color: #32271b;
+    display: flex;
+    flex-direction: column;
+}
+.main-window-statview-title {
+    flex: 1;
+    color: white;
+    font-family: Chalkboard, serif;
+    width: 100%;
+    text-align: center;
+    font-size: min(5vh, 5vw);
+}
+.main-window-statview-stat {
+    flex: 1;
+    color: white;
+    font-size: min(4vh, 4vw);
+    margin-left: min(2vh, 2vw);
+}
+.main-window-statview-item-button {
+    flex: 1;
+    margin-bottom: min(1vh, 1vw);
+    font-size: min(3vh, 3vw);
+}
+.main-window-statview-stats-button {
+    flex: 1;
+    margin-bottom: min(1vh, 1vw);
+    font-size: min(3vh, 3vw);
+}
+.main-window-text {
+    flex: 1;
+    padding: min(1.5vh, 1.5vw);
+    border: solid min(0.25vh, 0.25vw) black;
+    background: orange;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    font-size: min(3vh, 3vw);
+    max-width: 100%;
+}
+.main-window-text-line {
+    border-bottom: solid min(0.05vh, 0.05vw) rgba(0, 0, 0, 0.58);
+    margin-bottom: min(0.5vh, 0.5vw);
+    padding-bottom: min(0.75vh, 0.75vw);
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Project for Old Times' Sake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Window styles -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main-window.css">
+    <link rel="stylesheet" href="css/new-game-window.css">
+    <link rel="stylesheet" href="css/about-window.css">
+    <link rel="stylesheet" href="css/load-game-window.css">
+    <link rel="stylesheet" href="css/character-creator-window.css">
+    <link rel="stylesheet" href="css/items-popover.css">
+    <link rel="stylesheet" href="css/stats-popover.css">
+    <link rel="stylesheet" href="css/event-popover.css">
+    <link rel="stylesheet" href="css/shop-popover.css">
+    <link rel="stylesheet" href="css/attack-popover.css">
+    <link rel="stylesheet" href="css/heal-shop-popover.css">
+    <link rel="stylesheet" href="css/food-shop-popover.css">
+
+    <!-- Load the game code -->
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+<!-- The food shop window -->
+<div class="food-shop-popover-background-cover" id="food-shop-popover-background-cover" style="display:none">
+    <div class="food-shop-popover" id="food-shop-popover">
+        <div class="food-shop-title-container">
+            <div class="food-shop-title-image" id="food-shop-title-image-1"></div>
+            <div class="food-shop-title">Food Shop</div>
+            <div class="food-shop-title-image" id="food-shop-title-image-2"></div>
+        </div>
+        <div class="food-shop-top-container-title">Your Inventory</div>
+        <div class="food-shop-top-container">
+            <div class="food-shop-inventory-container">
+                <div class="food-shop-item-box" id="food-shop-item-0">
+                    <div class="food-shop-item-box-name" id="food-shop-item-name-0"></div>
+                    <div class="food-shop-item-box-value" id="food-shop-item-value-0"></div>
+                </div>
+                <div class="food-shop-item-box" id="food-shop-item-1">
+                    <div class="food-shop-item-box-name" id="food-shop-item-name-1"></div>
+                    <div class="food-shop-item-box-value" id="food-shop-item-value-1"></div>
+                </div>
+                <div class="food-shop-item-box" id="food-shop-item-2">
+                    <div class="food-shop-item-box-name" id="food-shop-item-name-2"></div>
+                    <div class="food-shop-item-box-value" id="food-shop-item-value-2"></div>
+                </div>
+                <div class="food-shop-item-box" id="food-shop-item-3">
+                    <div class="food-shop-item-box-name" id="food-shop-item-name-3"></div>
+                    <div class="food-shop-item-box-value" id="food-shop-item-value-3"></div>
+                </div>
+                <div class="food-shop-item-box" id="food-shop-item-4">
+                    <div class="food-shop-item-box-name" id="food-shop-item-name-4"></div>
+                    <div class="food-shop-item-box-value" id="food-shop-item-value-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="food-shop-bottom-container-title">Buyable Items</div>
+        <div class="food-shop-bottom-container-1">
+            <div class="food-shop-buy-item-box-1" id="food-shop-buy-item-0">
+                <div class="food-shop-buy-item-box-name" id="food-shop-buy-item-name-0"></div>
+                <div class="food-shop-buy-item-box-value" id="food-shop-buy-item-value-0"></div>
+            </div>
+            <div class="food-shop-buy-item-box-2" id="food-shop-buy-item-1">
+                <div class="food-shop-buy-item-box-name" id="food-shop-buy-item-name-1"></div>
+                <div class="food-shop-buy-item-box-value" id="food-shop-buy-item-value-1"></div>
+            </div>
+        </div>
+        <div class="food-shop-bottom-container-2">
+            <div class="food-shop-buy-item-box" id="food-shop-buy-item-2">
+                <div class="food-shop-buy-item-box-name-bottom" id="food-shop-buy-item-name-2"></div>
+                <div class="food-shop-buy-item-box-value" id="food-shop-buy-item-value-2"></div>
+            </div>
+            <div class="food-shop-buy-item-box" id="food-shop-buy-item-3">
+                <div class="food-shop-buy-item-box-name-bottom" id="food-shop-buy-item-name-3"></div>
+                <div class="food-shop-buy-item-box-value" id="food-shop-buy-item-value-3"></div>
+            </div>
+            <div class="food-shop-buy-item-box" id="food-shop-buy-item-4">
+                <div class="food-shop-buy-item-box-name-bottom" id="food-shop-buy-item-name-4"></div>
+                <div class="food-shop-buy-item-box-value" id="food-shop-buy-item-value-4"></div>
+            </div>
+        </div>
+        <div class="food-shop-bottom-gold" id="food-shop-bottom-gold">Gold: 0</div>
+        <button class="button food-shop-close-button" id="food-shop-close-button">Close</button>
+    </div>
+</div>
+
+<!-- The heal shop window -->
+<div class="heal-shop-popover-background-cover" id="heal-shop-popover-background-cover" style="display:none">
+    <div class="heal-shop-popover" id="heal-shop-popover">
+        <div class="heal-shop-title-container">
+            <div class="heal-shop-title-image"></div>
+            <div class="heal-shop-title">Heal Shop</div>
+            <div class="heal-shop-title-image"></div>
+        </div>
+        <div class="heal-shop-health" id="heal-shop-health">Health: 0 / 0</div>
+        <div class="heal-shop-container">
+            <div class="heal-shop-main-section">
+                <div class="heal-shop-sub-section">
+                    <button class="button heal-shop-3-7-button" id="heal-shop-3-7-button">Heal 3-7 Health</button>
+                    <div class="heal-shop-cost">Cost: 10 Gold</div>
+                </div>
+                <div class="heal-shop-sub-section">
+                    <button class="button heal-shop-30-70-button" id="heal-shop-30-70-button">Heal 30-70 Health</button>
+                    <div class="heal-shop-cost">Cost: 75 Gold</div>
+                </div>
+            </div>
+            <div class="heal-shop-main-section">
+                <div class="heal-shop-sub-section">
+                    <button class="button heal-shop-15-25-percent-button" id="heal-shop-15-25-percent-button">Heal
+                        15-25%
+                    </button>
+                    <div class="heal-shop-cost">Cost: 60 Gold</div>
+                </div>
+                <div class="heal-shop-sub-section">
+                    <button class="button heal-shop-full-heal-button" id="heal-shop-full-heal-button">Full Heal</button>
+                    <div class="heal-shop-cost">Cost: 200 Gold</div>
+                </div>
+            </div>
+        </div>
+        <div class="heal-shop-gold" id="heal-shop-gold">Current Gold: 0</div>
+        <button class="button heal-shop-close-button" id="heal-shop-close-button">Close</button>
+    </div>
+</div>
+
+<!-- The attack window -->
+<div class="attack-popover-background-cover" id="attack-popover-background-cover" style="display:none">
+    <div class="attack-popover" id="attack-popover">
+        <div class="attack-enemy-information-container">
+            <div class="attack-enemy-image" id="attack-enemy-image"></div>
+            <div class="attack-enemy-text-information">
+                <div class="attack-enemy-name" id="attack-enemy-name">Baby Chicken</div>
+                <div class="attack-enemy-health" id="attack-enemy-health">HP: 0 / 0</div>
+            </div>
+        </div>
+        <div class="attack-self-information-container" id="attack-self-information-container">You: HP: 0 / 0</div>
+        <div class="attack-controls-container" id="attack-controls-container">
+            <button class="button attack-attack-button" id="attack-attack-button">Attack</button>
+            <button class="button attack-run-button" id="attack-run-button">Run</button>
+            <button class="button attack-items-button" id="attack-items-button">Items</button>
+        </div>
+        <div class="attack-victory-container" id="attack-victory-container">
+            <button class="button attack-victory-close-button" id="attack-victory-close-button">Close</button>
+            <div class="attack-rewards-container">
+                <div class="attack-rewards-title">Discovered Valuables!</div>
+                <div class="attack-rewards-gold" id="attack-rewards-gold">Gold: 0</div>
+                <div class="attack-rewards-experience" id="attack-rewards-experience">Experience: 0</div>
+            </div>
+        </div>
+        <div class="attack-death-container" id="attack-death-container">
+            <div class="attack-death-text-container">
+                <div class="attack-death-title">You Died</div>
+                <div class="attack-death-gold" id="attack-death-gold">You lost 0 gold.</div>
+                <div class="attack-death-text">You were revived back in town.</div>
+            </div>
+            <button class="button attack-death-close-button" id="attack-death-close-button">Okay</button>
+        </div>
+    </div>
+</div>
+
+<!-- The armor and weapon shop window -->
+<div class="shop-popover-background-cover" id="shop-popover-background-cover" style="display:none">
+    <div class="shop-popover" id="shop-popover">
+        <div class="shop-title-container" id="shop-title-container">
+            <div class="shop-title-image" id="shop-title-image-1"></div>
+            <div class="shop-title" id="shop-title">Armor Shop</div>
+            <div class="shop-title-image" id="shop-title-image-2"></div>
+        </div>
+        <div class="shop-container">
+            <div class="shop-left-pane">
+                <div class="shop-left-top-pane">
+                    <div class="shop-table-header">
+                        <div class="shop-table-rating-column">Rating</div>
+                        <div class="shop-table-item-column">Item Name</div>
+                        <div class="shop-table-cost-column">Cost</div>
+                    </div>
+                    <div class="shop-table-row-container" id="shop-table-row-container"></div>
+                </div>
+                <div class="shop-left-bottom-pane">
+                    <div class="shop-current-armor-title" id="shop-current-armor-title">Current Armor</div>
+                    <div class="shop-current-armor" id="shop-current-armor">Name: Armor Item</div>
+                    <div class="shop-current-armor-count" id="shop-current-armor-count">Rating: 0</div>
+                    <div class="shop-current-armor-value" id="shop-current-armor-value">Worth: 0 Gold</div>
+                </div>
+            </div>
+            <div class="shop-right-pane">
+                <button class="button shop-close-button" id="shop-close-button">Close</button>
+                <div class="shop-gold" id="shop-gold">Gold: 0</div>
+                <button class="button shop-buy-button" id="shop-buy-button">Buy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The event window, like level up event -->
+<div class="event-popover-background-cover" id="event-popover-background-cover" style="display:none">
+    <div class="event-popover" id="event-popover">
+        <div class="event-title" id="event-title">Event Name</div>
+        <div class="event-text" id="event-text">Event Text</div>
+        <button class="button event-close-button" id="event-close-button">Close</button>
+    </div>
+</div>
+
+<!-- The stats window -->
+<div class="stats-popover-background-cover" id="stats-popover-background-cover" style="display:none">
+    <div class="stats-popover" id="stats-popover">
+        <button class="button stats-export-save-button" id="stats-export-save-button">Export Save File</button>
+        <div class="stats-title">Stats</div>
+        <div class="stats-container">
+            <div class="stats-box stats-name" id="stats-name">Name: Eek</div>
+        </div>
+        <div class="stats-container stats-container-level-experience">
+            <div class="stats-box" id="stats-level">Level: 0</div>
+            <div class="stats-box" id="stats-experience">Experience: 0</div>
+        </div>
+        <div class="stats-container stats-container-metrics">
+            <div class="stats-box" id="stats-strength">Strength: 0</div>
+            <div class="stats-box" id="stats-speed">Speed: 0</div>
+            <div class="stats-box" id="stats-health">Health: 0</div>
+        </div>
+        <div class="stats-container">
+            <div class="stats-box" id="stats-armor">Armor: Nothing</div>
+            <div class="stats-box" id="stats-armor-count">Armor Rating: 0</div>
+        </div>
+        <div class="stats-container">
+            <div class="stats-box" id="stats-weapon">Weapon: Nothing</div>
+            <div class="stats-box" id="stats-weapon-count">Weapon Rating: 0</div>
+        </div>
+        <div class="stats-button-container">
+            <button class="button stats-close-button" id="stats-close-button">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- The items window -->
+<div class="items-popover-background-cover" id="items-popover-background-cover" style="display:none">
+    <div class="items-popover" id="items-popover">
+        <div class="items-title">Items</div>
+        <div class="items-container">
+            <div class="item-box" id="item-0">
+                <div class="item-box-name" id="item-name-0"></div>
+            </div>
+            <div class="item-box" id="item-1">
+                <div class="item-box-name" id="item-name-1"></div>
+            </div>
+            <div class="item-box" id="item-2">
+                <div class="item-box-name" id="item-name-2"></div>
+            </div>
+            <div class="item-box" id="item-3">
+                <div class="item-box-name" id="item-name-3"></div>
+            </div>
+            <div class="item-box" id="item-4">
+                <div class="item-box-name" id="item-name-4"></div>
+            </div>
+        </div>
+        <button class="button items-close-button" id="items-close-button">Close</button>
+    </div>
+</div>
+
+<!-- The load game window -->
+<div class="fullWindow load-game-window" id="load-game-window" style="display:none">
+    <div class="textStroke load-game-title">
+        Load Game
+    </div>
+    <div class="load-game-container" id="load-game-container">
+
+    </div>
+    <button class="textStroke button load-game-import-button">Import Save File</button>
+    <button class="textStroke button load-game-back-button" id="load-game-back-button">
+        Back
+    </button>
+</div>
+
+<!-- The about game window -->
+<div class="fullWindow about-window" id="about-window" style="display:none">
+    <div class="textStroke about-title">
+        About Team Project for Old Times' Sake!
+    </div>
+    <div class="about-text">This is a fan game, made quick and fast.
+        In the style of <a href="https://www.yipesoftware.com/" target="_blank">Quest of Yipe!</a>
+
+        Enjoy!
+        Game Maker's Garage
+    </div>
+    <button class="textStroke button about-back-button" id="about-back-button">
+        Back
+    </button>
+</div>
+
+<!-- The game start screen -->
+<div class="fullWindow new-game-window" id="new-game-window">
+    <div class="textStroke new-game-title">
+        Team Project for Old Times' Sake!
+    </div>
+    <button class="button new-game-new-button" id="new-game-button">
+        New Game
+    </button>
+    <button class="textStroke button new-game-load-button" id="load-game-button">
+        Load Game
+    </button>
+    <button class="textStroke button new-game-about-button" id="about-game-button">
+        About Game
+    </button>
+</div>
+
+<!-- The character creator window -->
+<div class="fullWindow character-creator-window" id="character-creator-window" style="display:none">
+    <div class="textStroke character-creator-window-title">
+        Build your Character!
+    </div>
+    <div class="character-creator-window-name-container">
+        <span>Name: </span>
+        <label>
+            <input class="character-creator-window-name" id="character-creator-window-name" value="Eek"/>
+        </label>
+    </div>
+    <div class="character-creator-window-stats-container">
+        <div class="character-creator-window-stats-title">Stats</div>
+        <hr>
+        <div class="character-creator-window-stats-metric-container">
+            <div class="character-creator-window-stats-metric" id="character-creator-window-strength-metric">Strength:
+                0
+            </div>
+            <div class="character-creator-window-stats-metric" id="character-creator-window-speed-metric">Speed: 0</div>
+            <div class="character-creator-window-stats-metric" id="character-creator-window-health-metric">Health: 0
+            </div>
+        </div>
+        <hr>
+        <button class="textStroke button character-creator-window-stats-reroll-button"
+                id="character-creator-window-stats-reroll-button">Re-roll
+        </button>
+    </div>
+    <button id="character-creator-window-go-button" class="textStroke button character-creator-window-go-button">
+        Go!
+    </button>
+</div>
+
+<!-- The main game window -->
+<div class="fullWindow main-window" id="main-window" style="display:none">
+    <div class="main-window-top">
+        <div class="main-window-gameview">
+
+        </div>
+        <div class="main-window-statview">
+            <div class="textStroke main-window-statview-title">
+                Team Project for Old Times' Sake
+            </div>
+            <div class="main-window-statview-stat" id="main-window-statview-stat-health">
+                Health: 0/0
+            </div>
+            <div class="main-window-statview-stat" id="main-window-statview-stat-experience">
+                Experience: 0
+            </div>
+            <div class="main-window-statview-stat" id="main-window-statview-stat-level">
+                Level: 0
+            </div>
+            <div class="main-window-statview-stat" id="main-window-statview-stat-gold">
+                Gold: 0
+            </div>
+            <button class="textStroke button main-window-statview-item-button" id="itemsButton">
+                Items
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="statsButton">
+                Stats
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="armorShopButton">
+                Armor Shop
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="weaponShopButton">
+                Weapon Shop
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="healShopButton">
+                Heal Shop
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="foodShopButton">
+                Food Shop
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="levelUpButton">
+                Level Up Event
+            </button>
+            <button class="textStroke button main-window-statview-stats-button" id="attackButton">
+                Attack
+            </button>
+        </div>
+    </div>
+    <div class="main-window-text" id="mainTextDiv"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.about-window {
+    background: #ffcd85;
+    display: flex;
+}
+.about-title {
+    color: white;
+    font-family: Chalkboard, serif;
+    width: 100%;
+    text-align: center;
+    font-size: min(8vh, 8vw);
+    margin-top: min(3vh, 3vw);
+    margin-bottom: min(2vh, 2vw);
+}
+.about-text {
+    flex: 1;
+    margin: min(5vh, 5vw);
+    font-size: min(6vh, 5vw);
+    white-space: pre-line;
+}
+.about-back-button {
+    margin-bottom: min(5vh, 5vw);
+    font-size: min(7vh, 7vw);
+}

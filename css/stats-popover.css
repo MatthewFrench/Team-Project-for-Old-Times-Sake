@@ -1,0 +1,74 @@
+.stats-popover-background-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 10;
+}
+.stats-popover {
+    position: absolute;
+    width: min(80vh, 80vw);
+    left: calc(50vw - min(40vh, 40vw) - min(0.5vh, 0.5vw));
+    height: min(42vw, 42vh);
+    top: calc(min(15vw, 15vh) - min(0.5vh, 0.5vw));
+    border: solid min(0.5vh, 0.5vw) black;
+    background: #ffdbad;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-image: url("../images/textures/texture-3.jpg");
+
+    color: white;
+    text-shadow: min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;
+}
+.stats-title {
+    width: 100%;
+    text-align: center;
+    font-size: min(6vh, 6vw);
+    font-family: Chalkboard, serif;
+}
+.stats-container {
+    flex: 1;
+    display: flex;
+    padding-right: min(1vh, 1vw);
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-flow: wrap;
+}
+.stats-container-level-experience {
+    border-bottom: solid min(0.1vh, 0.1vw) white;
+}
+.stats-container-metrics {
+    border-bottom: solid min(0.1vh, 0.1vw) white;
+}
+.stats-box {
+    font-size: min(3vh, 3vw);
+    margin: auto;
+}
+.stats-name {
+    font-size: min(3.5vh, 3.5vw);
+    text-decoration: underline;
+}
+.stats-button-container {
+    text-align: center;
+}
+.stats-close-button {
+    margin-bottom: min(1vh, 1vw);
+    margin-top: min(1vh, 1vw);
+}
+.stats-export-save-button {
+    position: absolute;
+    right: min(1vh, 1vw);
+    top: min(1vh, 1vw);
+    margin-bottom: min(1vh, 1vw);
+    font-size: min(2.5vh, 2.5vw);
+    margin-left: min(2vh, 2vw);
+    margin-right: min(2vh, 2vw);
+    border-radius: min(1vh, 1vw);
+}

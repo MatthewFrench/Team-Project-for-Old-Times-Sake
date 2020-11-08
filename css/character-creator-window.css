@@ -1,0 +1,54 @@
+.character-creator-window {
+    background: #ffcd85;
+}
+.character-creator-window-title {
+    flex: 1;
+    color: white;
+    font-family: Chalkboard, serif;
+    width: 100%;
+    text-align: center;
+    font-size: min(7vh, 7vw);
+    margin-top: min(2vh, 2vw);
+    max-height: min(13vh, 13vw);
+}
+.character-creator-window-name-container {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    font-size: min(5vh, 5vw);
+    max-height: min(10vh, 10vw);
+}
+.character-creator-window-stats-container {
+    flex: 1;
+    font-size: min(5vh, 5vw);
+    width: 100%;
+    margin-top: min(2vh, 2vw);
+}
+.character-creator-window-go-button {
+    margin-bottom: min(2vh, 2vw);
+    font-size: min(5vh, 5vw);
+}
+.character-creator-window-name {
+    width: min(65vh, 65vw);
+    font-size: min(5vh, 5vw);
+}
+.character-creator-window-stats-title {
+    font-size: min(6vh, 6vw);
+    margin-bottom: min(1vh, 1vw);
+    margin-left: min(5vh, 5vw);
+}
+.character-creator-window-stats-metric-container {
+    display: flex;
+    width: 100%;
+}
+.character-creator-window-stats-metric {
+    flex: 1;
+    text-align: center;
+}
+.character-creator-window-stats-reroll-button {
+    text-align: center;
+    font-size: min(6vh, 6vw);
+    padding-left: min(2vh, 2vw);
+    padding-right: min(2vh, 2vw);
+    display: block;
+}
