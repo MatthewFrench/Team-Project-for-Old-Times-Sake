@@ -5,7 +5,7 @@ Made by a team from the Game Maker's Garage.
 Play here: https://matthewfrench.github.io/Team-Project-for-Old-Times-Sake/
 
 ### How to Contribute
-[Video: Getting the tools]()  
+[Video: Getting the tools](https://youtu.be/le7noAENHjA)  
 [Video: Running the project]()  
 [Video: Understanding the structure]()  
 [Video: Saving graphic/sound/code changes]()
