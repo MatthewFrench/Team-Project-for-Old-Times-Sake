@@ -7,7 +7,7 @@ Play here: https://matthewfrench.github.io/Team-Project-for-Old-Times-Sake/
 ### How to Contribute
 [Video: Getting the tools](https://youtu.be/le7noAENHjA)  
 [Video: Running the project](https://youtu.be/JQmDcWRbijA)  
-[Video: Understanding the structure]()  
+[Video: Understanding the structure](https://youtu.be/RNnasLCToUs)  
 [Video: Saving graphic/sound/code changes]()
 
 The above videos will guide you through getting your computer ready to run the project, running the project, understanding how the project is setup and saving any changes back to the project repository so everyone can see them.
