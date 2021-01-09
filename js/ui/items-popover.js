@@ -1,8 +1,9 @@
-import {UseItem} from "./models/ItemData.js";
+import {UseItem} from "../models/ItemData.js";
 
 export class ItemsPopover {
     constructor(game) {
         this.game = game
+        this.viewName = "Item Popover";
         this.popover = document.getElementById("items-popover-background-cover");
         this.closeButton = document.getElementById("items-close-button");
         this.closeButton.onclick = () => {
@@ -65,8 +66,10 @@ export class ItemsPopover {
         this.useCallback = useCallback;
         this.updateItemDisplay();
         this.popover.style.display = "";
+        this.game.addView(this.viewName);
     }
     hide() {
         this.popover.style.display = "none";
+        this.game.removeView(this.viewName);
     }
 }

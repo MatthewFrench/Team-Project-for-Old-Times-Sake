@@ -1,8 +1,9 @@
-import {ITEM_CORNED_BEEF_HASH, ITEM_EARL_GREY_TEA, ITEM_SPAGHETTI, ITEM_SPINACH, ITEM_SUSHI} from "./models/ItemData.js";
+import {ITEM_CORNED_BEEF_HASH, ITEM_EARL_GREY_TEA, ITEM_SPAGHETTI, ITEM_SPINACH, ITEM_SUSHI} from "../models/ItemData.js";
 
 export class FoodShopPopover {
     constructor(game) {
         this.game = game;
+        this.viewName = "Food Shop Popover";
         this.popover = document.getElementById("food-shop-popover-background-cover");
         this.closeButton = document.getElementById("food-shop-close-button");
         this.closeButton.onclick = () => {
@@ -139,8 +140,10 @@ export class FoodShopPopover {
         this.titleImage2.style.backgroundImage = "url(\"./images/" + image +"\")";
         this.updateInventoryDisplay();
         this.popover.style.display = "";
+        this.game.addView(this.viewName);
     }
     hide() {
         this.popover.style.display = "none";
+        this.game.removeView(this.viewName);
     }
 }

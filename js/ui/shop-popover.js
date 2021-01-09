@@ -1,6 +1,7 @@
 export class ShopPopover {
     constructor(game) {
         this.game = game;
+        this.viewName = "Armor/Weapon Shop Popover";
         this.selectedItemDiv = null;
         this.popoverContainer = document.getElementById("shop-popover-background-cover");
         this.popover = document.getElementById("shop-popover");
@@ -25,9 +26,11 @@ export class ShopPopover {
     }
     show() {
         this.popoverContainer.style.display = "";
+        this.game.addView(this.viewName);
     }
     hide() {
         this.popoverContainer.style.display = "none";
+        this.game.removeView(this.viewName);
     }
     setShopType(shopType, image, backgroundImage) {
         this.popover.style.backgroundImage = "url(\"./images/textures/" + backgroundImage +"\")";

@@ -1,0 +1,25 @@
+{
+  "columns": 0,
+  "grid": {
+    "height": 1,
+    "orientation": "orthogonal",
+    "width": 1
+  },
+  "margin": 0,
+  "name": "Characters",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.4.3",
+  "tileheight": 2048,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "..\/images\/Originals\/baby-chicken.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    }
+  ],
+  "tilewidth": 2048,
+  "type": "tileset",
+  "version": 1.4
+}

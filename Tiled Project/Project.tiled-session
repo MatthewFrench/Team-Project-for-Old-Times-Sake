@@ -1,0 +1,76 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Map 1.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "Basic Tiles.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.034,
+            "scaleInEditor": 0.06
+        },
+        "Characters.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.9868,
+            "scaleInEditor": 0.06
+        },
+        "Map 1.tmx": {
+            "scale": 0.015625,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 22240,
+                "y": 12000
+            }
+        },
+        "Map 1.tmx#Basic Tiles": {
+            "dynamicWrapping": true
+        },
+        "Map 2.tmx": {
+            "scale": 0.018765536221590908,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 10471.323477232407,
+                "y": 10631.191011235955
+            }
+        },
+        "Map.tmx": {
+            "scale": 0.0191,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 10078.534031413612,
+                "y": 10549.738219895287
+            }
+        }
+    },
+    "lastUsedTilesetExportFilter": "JSON tileset files (*.json)",
+    "map.height": 10,
+    "map.lastUsedExportFilter": "JSON map files (*.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 2048,
+    "map.tileWidth": 2048,
+    "map.width": 10,
+    "openFiles": [
+        "Basic Tiles.tsx",
+        "Map 1.tmx",
+        "Characters.tsx"
+    ],
+    "project": "Project.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "Basic Tiles.tsx",
+        "Characters.tsx",
+        "Map 1.tmx",
+        "Map 2.tmx",
+        "Map.tmx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}

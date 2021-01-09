@@ -22,7 +22,7 @@
     background-position: center;
     background-repeat: repeat;
     background-size: 100%;
-    background-image: url("../images/textures/texture-15.jpg");
+    background-image: url("../images/textures/blue-background.jpg");
 }
 .attack-enemy-information-container {
     flex: 1;

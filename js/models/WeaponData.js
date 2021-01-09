@@ -14,7 +14,7 @@ const WEAPONS = [WEAPON_PAPER_CARDBOARD_TUBE, WEAPON_SERRATED_PLASTIC_SPORK, WEA
 export function ShowWeaponShop(game) {
     let currentGame = game.getCurrentGame();
 
-    game.shopPopover.setShopType("Weapon", "sword.png", "texture-7.jpg");
+    game.shopPopover.setShopType("Weapon", "sword.png", "red-wood-background.jpg");
     game.shopPopover.setItems(WEAPONS, currentGame.weapon);
     UpdateCurrentWeaponDisplay(game);
     game.shopPopover.updateGoldDisplay();

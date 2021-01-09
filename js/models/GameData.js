@@ -13,6 +13,10 @@ export class GameData {
         this.armor = null;
         this.weapon = null;
         this.items = [];
+        // Position in the world
+        this.currentMap = "";
+        this.x = 0;
+        this.y = 0;
     }
     getArmorCount() {
         if (this.armor === null) {

@@ -1,8 +1,9 @@
-import {AppendExperience} from "./models/LevelUpData.js";
+import {AppendExperience} from "../models/LevelUpData.js";
 
 export class AttackPopover {
     constructor(game) {
         this.game = game;
+        this.viewName = "Attack Popover";
         this.popover = document.getElementById("attack-popover-background-cover");
         document.getElementById("attack-run-button").onclick = () => {
             this.runClicked();
@@ -31,6 +32,8 @@ export class AttackPopover {
         // Enemy modifiable stats
         this.enemyHealth = 0;
         this.enemyCurrentHealth = 0;
+        this.victoryCloseCallback = () => {};
+        this.deathCloseCallback = () => {};
     }
     updateHealthDisplays() {
         let currentGame = this.game.getCurrentGame();
@@ -93,11 +96,7 @@ export class AttackPopover {
             let earnedGold = this.enemy.gold;
             currentGame.gold += earnedGold;
             // Killed enemy
-            this.showVictory(earnedGold, earnedExperience, () => {
-                this.hide();
-                this.game.mainWindow.updateDisplay();
-                AppendExperience(earnedExperience, this.game);
-            });
+            this.showVictory(earnedGold, earnedExperience);
             // Return if still alive
             return false;
         }
@@ -141,11 +140,7 @@ export class AttackPopover {
             }
             let actualLostGold = currentGold - newGold;
             currentGame.gold = newGold;
-            this.showDeath(actualLostGold, () => {
-                currentGame.currentHealth = 1;
-                this.game.mainWindow.updateDisplay();
-                this.hide();
-            });
+            this.showDeath(actualLostGold);
             // Return if still alive
             return false;
         }
@@ -249,18 +244,27 @@ export class AttackPopover {
 
         return [creature1Result, creature2Result];
     }
-    showVictory(gold, experience, closeCallback) {
+    showVictory(gold, experience) {
         this.victoryGoldDiv.innerText = "Gold: " + gold;
         this.victoryExperienceDiv.innerText = "Experience: " + experience;
-        this.victoryCloseButton.onclick = closeCallback;
+        this.victoryCloseButton.onclick = () => {
+            this.hide();
+            AppendExperience(experience, this.game);
+            this.victoryCloseCallback();
+            this.game.mainWindow.updateDisplay();
+        }
         this.victoryDiv.style.display = "";
         this.controlsContainer.style.display = "none";
         this.victoryCloseButton.focus();
         this.game.print(this.enemy.name + " defeated! You earned " + gold + " gold and " + experience + " experience.");
     }
-    showDeath(lostGold, closeCallback) {
+    showDeath(lostGold) {
         this.deathGoldDiv.innerText = "You lost " + lostGold + " gold.";
-        this.deathCloseButton.onclick = closeCallback;
+        this.deathCloseButton.onclick = () => {
+            this.hide();
+            this.deathCloseCallback();
+            this.game.mainWindow.updateDisplay();
+        }
         this.deathDiv.style.display = "";
         this.controlsContainer.style.display = "none";
         this.deathCloseButton.focus();
@@ -290,7 +294,8 @@ export class AttackPopover {
             this.game.print("You successfully ran away from the " + this.enemy.name.toLowerCase() + "!");
         }
     }
-    show(enemyCreatureData) {
+
+    show(enemyCreatureData, victoryCloseCallback, deathCloseCallback) {
         this.enemy = enemyCreatureData;
         this.enemyHealth = enemyCreatureData.health;
         this.enemyCurrentHealth = enemyCreatureData.health;
@@ -303,9 +308,13 @@ export class AttackPopover {
         this.popover.style.display = "";
         this.attackButton.focus();
         this.game.print("A " + enemyCreatureData.name.toLowerCase() +  " attacks! " + enemyCreatureData.encounterLine);
+        this.game.addView(this.viewName);
+        this.victoryCloseCallback = victoryCloseCallback;
+        this.deathCloseCallback = deathCloseCallback;
     }
     hide() {
         this.popover.style.display = "none";
         this.game.mainWindow.updateDisplay();
+        this.game.removeView(this.viewName);
     }
 }

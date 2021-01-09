@@ -9,6 +9,14 @@
     flex: 2;
     border: solid min(0.25vh, 0.25vw) black;
     padding: min(1vh, 1vw);
+    position: relative;
+}
+.gameview-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .main-window-statview {
     flex: 1;

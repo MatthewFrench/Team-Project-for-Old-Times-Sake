@@ -1,6 +1,7 @@
 export class StatsPopover {
     constructor(game) {
         this.game = game
+        this.viewName = "Shop Popover";
         this.popover = document.getElementById("stats-popover-background-cover")
         this.closeButton = document.getElementById("stats-close-button")
         this.closeButton.onclick = () => {
@@ -44,8 +45,10 @@ export class StatsPopover {
         this.updateDisplay();
         this.popover.style.display = ""
         this.closeButton.focus();
+        this.game.addView(this.viewName);
     }
     hide() {
         this.popover.style.display = "none"
+        this.game.removeView(this.viewName);
     }
 }

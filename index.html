@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Team Project for Old Times' Sake</title>
+    <title>Adventure of Eek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- Window styles -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main-window.css">
     <link rel="stylesheet" href="css/new-game-window.css">
@@ -18,13 +17,32 @@
     <link rel="stylesheet" href="css/attack-popover.css">
     <link rel="stylesheet" href="css/heal-shop-popover.css">
     <link rel="stylesheet" href="css/food-shop-popover.css">
-
-    <!-- Load the game code -->
     <script type="module" src="js/main.js"></script>
+
+    <!-- Use HTML to preload resources -->
+    <link rel="preload" href="images/baby-chicken.png" as="image">
+    <link rel="preload" href="images/corned-beef-hash.png" as="image">
+    <link rel="preload" href="images/earl-grey-tea.png" as="image">
+    <link rel="preload" href="images/heart.png" as="image">
+    <link rel="preload" href="images/shield.png" as="image">
+    <link rel="preload" href="images/spaghetti.png" as="image">
+    <link rel="preload" href="images/spinach.png" as="image">
+    <link rel="preload" href="images/sushi.png" as="image">
+    <link rel="preload" href="images/sword.png" as="image">
+    <link rel="preload" href="images/utensils-tara.png" as="image">
+    <link rel="preload" href="images/utensils.png" as="image">
+
+
+    <link rel="preload" href="images/textures/space-background.jpg" as="image">
+    <link rel="preload" href="images/textures/ice-background.jpg" as="image">
+    <link rel="preload" href="images/textures/blue-background.jpg" as="image">
+    <link rel="preload" href="images/textures/slate-background.jpg" as="image">
+    <link rel="preload" href="images/textures/light-wood-background.jpg" as="image">
+    <link rel="preload" href="images/textures/red-wood-background.jpg" as="image">
+    <link rel="preload" href="images/textures/sand-stone-background.jpg" as="image">
 </head>
 <body>
 
-<!-- The food shop window -->
 <div class="food-shop-popover-background-cover" id="food-shop-popover-background-cover" style="display:none">
     <div class="food-shop-popover" id="food-shop-popover">
         <div class="food-shop-title-container">
@@ -87,7 +105,6 @@
     </div>
 </div>
 
-<!-- The heal shop window -->
 <div class="heal-shop-popover-background-cover" id="heal-shop-popover-background-cover" style="display:none">
     <div class="heal-shop-popover" id="heal-shop-popover">
         <div class="heal-shop-title-container">
@@ -125,7 +142,6 @@
     </div>
 </div>
 
-<!-- The attack window -->
 <div class="attack-popover-background-cover" id="attack-popover-background-cover" style="display:none">
     <div class="attack-popover" id="attack-popover">
         <div class="attack-enemy-information-container">
@@ -160,7 +176,6 @@
     </div>
 </div>
 
-<!-- The armor and weapon shop window -->
 <div class="shop-popover-background-cover" id="shop-popover-background-cover" style="display:none">
     <div class="shop-popover" id="shop-popover">
         <div class="shop-title-container" id="shop-title-container">
@@ -194,7 +209,6 @@
     </div>
 </div>
 
-<!-- The event window, like level up event -->
 <div class="event-popover-background-cover" id="event-popover-background-cover" style="display:none">
     <div class="event-popover" id="event-popover">
         <div class="event-title" id="event-title">Event Name</div>
@@ -203,7 +217,6 @@
     </div>
 </div>
 
-<!-- The stats window -->
 <div class="stats-popover-background-cover" id="stats-popover-background-cover" style="display:none">
     <div class="stats-popover" id="stats-popover">
         <button class="button stats-export-save-button" id="stats-export-save-button">Export Save File</button>
@@ -234,7 +247,6 @@
     </div>
 </div>
 
-<!-- The items window -->
 <div class="items-popover-background-cover" id="items-popover-background-cover" style="display:none">
     <div class="items-popover" id="items-popover">
         <div class="items-title">Items</div>
@@ -259,7 +271,6 @@
     </div>
 </div>
 
-<!-- The load game window -->
 <div class="fullWindow load-game-window" id="load-game-window" style="display:none">
     <div class="textStroke load-game-title">
         Load Game
@@ -273,26 +284,24 @@
     </button>
 </div>
 
-<!-- The about game window -->
 <div class="fullWindow about-window" id="about-window" style="display:none">
     <div class="textStroke about-title">
-        About Team Project for Old Times' Sake!
+        About Adventure of Eek!
     </div>
     <div class="about-text">This is a fan game, made quick and fast.
         In the style of <a href="https://www.yipesoftware.com/" target="_blank">Quest of Yipe!</a>
 
         Enjoy!
-        Game Maker's Garage
+        Matthew French
     </div>
     <button class="textStroke button about-back-button" id="about-back-button">
         Back
     </button>
 </div>
 
-<!-- The game start screen -->
-<div class="fullWindow new-game-window" id="new-game-window">
+<div class="fullWindow new-game-window" id="new-game-window" style="display:none">
     <div class="textStroke new-game-title">
-        Team Project for Old Times' Sake!
+        Adventure of Eek!
     </div>
     <button class="button new-game-new-button" id="new-game-button">
         New Game
@@ -305,7 +314,6 @@
     </button>
 </div>
 
-<!-- The character creator window -->
 <div class="fullWindow character-creator-window" id="character-creator-window" style="display:none">
     <div class="textStroke character-creator-window-title">
         Build your Character!
@@ -337,15 +345,14 @@
     </button>
 </div>
 
-<!-- The main game window -->
 <div class="fullWindow main-window" id="main-window" style="display:none">
     <div class="main-window-top">
         <div class="main-window-gameview">
-
+            <canvas id="gameview-canvas" class="gameview-canvas"></canvas>
         </div>
         <div class="main-window-statview">
             <div class="textStroke main-window-statview-title">
-                Team Project for Old Times' Sake
+                Adventure of Eek
             </div>
             <div class="main-window-statview-stat" id="main-window-statview-stat-health">
                 Health: 0/0
@@ -364,24 +371,6 @@
             </button>
             <button class="textStroke button main-window-statview-stats-button" id="statsButton">
                 Stats
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="armorShopButton">
-                Armor Shop
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="weaponShopButton">
-                Weapon Shop
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="healShopButton">
-                Heal Shop
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="foodShopButton">
-                Food Shop
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="levelUpButton">
-                Level Up Event
-            </button>
-            <button class="textStroke button main-window-statview-stats-button" id="attackButton">
-                Attack
             </button>
         </div>
     </div>

@@ -22,7 +22,7 @@
     background-position: center;
     background-repeat: repeat;
     background-size: 100%;
-    background-image: url("../images/textures/texture-2.jpg");
+    background-image: url("../images/textures/ice-background.jpg");
 
     color: white;
     text-shadow: min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) max(-0.15vh, -0.15vw) min(0.25vh, 0.25vw) black, max(-0.15vh, -0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black, min(0.15vh, 0.15vw) min(0.15vh, 0.15vw) min(0.25vh, 0.25vw) black;

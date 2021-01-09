@@ -1,6 +1,7 @@
 export class NewGameWindow {
     constructor(game) {
         this.game = game;
+        this.viewName = "New Game Window";
         this.window = document.getElementById("new-game-window")
         this.newGameButton = document.getElementById("new-game-button")
         this.newGameButton.onclick = () => {
@@ -44,8 +45,10 @@ export class NewGameWindow {
     }
     show() {
         this.window.style.display = ""
+        this.game.addView(this.viewName);
     }
     hide() {
         this.window.style.display = "none"
+        this.game.removeView(this.viewName);
     }
 }

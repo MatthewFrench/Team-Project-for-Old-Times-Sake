@@ -1,6 +1,7 @@
 export class LoadGameWindow {
     constructor(game) {
         this.game = game;
+        this.viewName = "Load Game Window";
         this.window = document.getElementById("load-game-window")
         this.backButton = document.getElementById("load-game-back-button")
         this.backButton.onclick = () => {
@@ -11,9 +12,11 @@ export class LoadGameWindow {
     }
     show() {
         this.window.style.display = ""
+        this.game.addView(this.viewName);
     }
     hide() {
         this.window.style.display = "none"
+        this.game.removeView(this.viewName);
     }
     add(gameName, gameLevel) {
         let loadGameItem = document.createElement("button")

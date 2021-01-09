@@ -1,0 +1,55 @@
+{
+  "columns": 0,
+  "grid": {
+    "height": 1,
+    "orientation": "orthogonal",
+    "width": 1
+  },
+  "margin": 0,
+  "name": "Basic Tiles",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.4.3",
+  "tileheight": 2048,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "..\/images\/Originals\/tiles\/flowers.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    },
+    {
+      "id": 1,
+      "image": "..\/images\/Originals\/tiles\/grass.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    },
+    {
+      "id": 2,
+      "image": "..\/images\/Originals\/tiles\/house.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    },
+    {
+      "id": 3,
+      "image": "..\/images\/Originals\/tiles\/tree.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    },
+    {
+      "id": 4,
+      "image": "..\/images\/Originals\/tiles\/vines.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    },
+    {
+      "id": 5,
+      "image": "..\/images\/Originals\/tiles\/red.png",
+      "imageheight": 2048,
+      "imagewidth": 2048
+    }
+  ],
+  "tilewidth": 2048,
+  "type": "tileset",
+  "version": 1.4
+}

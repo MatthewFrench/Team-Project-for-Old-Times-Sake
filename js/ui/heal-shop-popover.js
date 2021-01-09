@@ -1,6 +1,7 @@
 export class HealShopPopover {
     constructor(game) {
         this.game = game;
+        this.viewName = "Heal Shop Popover";
         this.popover = document.getElementById("heal-shop-popover-background-cover");
         this.closeButton = document.getElementById("heal-shop-close-button");
         this.closeButton.onclick = () => {
@@ -56,8 +57,10 @@ export class HealShopPopover {
     show() {
         this.updateDisplay();
         this.popover.style.display = "";
+        this.game.addView(this.viewName);
     }
     hide() {
         this.popover.style.display = "none";
+        this.game.removeView(this.viewName);
     }
 }

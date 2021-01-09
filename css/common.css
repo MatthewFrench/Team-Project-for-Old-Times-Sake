@@ -7,11 +7,7 @@ body {
     position: absolute;
     padding: 0;
     margin: 0;
-
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-    background-image: url("../images/textures/texture-11.jpg");
+    background-color: #211a12;
 }
 .button {
     color: white;
